@@ -2,28 +2,24 @@
 
 ## Product intent & audience
 
-- App likely involves processing/reading documents (PDF and Word), inferred from included libraries `mammoth` and `pdfjs-dist`.
-- Exact product type, target audience, and core user flows are not yet defined.
+- Existing web project being shared incrementally; user is uploading files in batches ("first four files").
+- Specific app purpose not yet defined.
 
 ## Brand personality & voice
 
-- Assistant communicates in Russian; user writes in Russian.
+- Communication language: Russian.
 
 ## Visual design & UX direction
 
-- Styling via Tailwind CSS; icons via `lucide-react`.
-- No design decisions made yet.
+- No design details inferred yet; project includes `index.html`.
 
 ## Decisions, constraints & rationale
 
-- Tech stack: Vite + React + TypeScript.
-- Backend/auth/data: Supabase.
-- Document parsing: `mammoth` (Word), `pdfjs-dist` (PDF).
-- Project is a clean starter — no pages or components exist yet.
+- Project uses npm with `package.json` / `package-lock.json`.
+- Linting via ESLint flat config (`eslint.config.js`).
+- Files provided so far matched existing project content — no changes applied.
 
 ## Open questions & assumptions
 
-- What is the app? (document reader, converter, library, analyzer, etc.)
-- What should users do with documents? (upload, view, search, annotate, convert)
-- Is authentication required or is the site open?
-- Assumption: Supabase will be used for auth and data storage, but this is unconfirmed.
+- App purpose, tech stack details, and desired modifications are unknown.
+- User appears to be re-sharing an existing project; intent for changes not yet stated.
