@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-50 text-ink-800 antialiased;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  background-image:
+    radial-gradient(rgba(37, 158, 112, 0.07) 0.7px, transparent 0.7px),
+    radial-gradient(1200px 500px at 85% -10%, rgba(232, 189, 69, 0.1), transparent 60%),
+    radial-gradient(900px 420px at -10% 0%, rgba(37, 158, 112, 0.1), transparent 55%);
+  background-size: 18px 18px, 100% 100%, 100% 100%;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Manrope', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+@keyframes mentorBreathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-3px) scale(1.012); }
+}
+@keyframes mentorSway {
+  0%, 100% { transform: rotate(-0.8deg); }
+  50% { transform: rotate(0.8deg); }
+}
+@keyframes dotTalk {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+
+.animate-mentor-breathe { animation: mentorBreathe 3.2s ease-in-out infinite; transform-origin: bottom center; }
+.animate-mentor-sway { animation: mentorSway 4.5s ease-in-out infinite; transform-origin: bottom center; }
+.dot-talk { animation: dotTalk 1s ease-in-out infinite; display: inline-block; }
+
+.animate-fade-up { animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-fade-in { animation: fadeIn 0.35s ease-out both; }
+
+.delay-1 { animation-delay: 0.06s; }
+.delay-2 { animation-delay: 0.12s; }
+.delay-3 { animation-delay: 0.18s; }
+.delay-4 { animation-delay: 0.24s; }
+.delay-5 { animation-delay: 0.3s; }
+.delay-6 { animation-delay: 0.36s; }
+
+.skeleton {
+  background: linear-gradient(90deg, rgba(15,39,22,0.05) 25%, rgba(15,39,22,0.1) 50%, rgba(15,39,22,0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #eceef2; }
+::-webkit-scrollbar-thumb { background: #c3cbd6; border-radius: 8px; }
